@@ -40,8 +40,8 @@ app.use(morgan('dev'));
 app.use(passport.initialize());
 
 app.get('/api/csrf-token', csrfTokenHandler);
-app.use('/api/auth',       authRoutes);
 app.use(doubleCsrfProtection);
+app.use('/api/auth',       authRoutes);
 app.use('/api/zonas',          zonasRoutes);
 app.use('/api/empresas',       empresasRoutes);
 app.use('/api/rutas',          rutasRoutes);
