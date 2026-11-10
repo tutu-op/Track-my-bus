@@ -26,6 +26,7 @@ import notificacionesRoutes from './routes/notificaciones.routes.js';
 import pagosRoutes          from './routes/pagos.routes.js';
 
 const app = express();
+app.set('trust proxy', 1);
 
 app.use(helmetConfig);
 app.use(cors({
